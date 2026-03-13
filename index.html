@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>µÑ¿¨¶û×ø±ê ? Çò×ø±ê ×ª»»Æ÷</title>
+    <title>ç¬›å¡å°”åæ ‡ â†” çƒåæ ‡ è½¬æ¢å™¨</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
@@ -94,9 +94,9 @@
         <!-- Header -->
         <div class="text-center mb-8">
             <h1 class="text-4xl md:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                ×ø±ê×ª»»¿ÉÊÓ»¯
+                åæ ‡è½¬æ¢å¯è§†åŒ–
             </h1>
-            <p class="text-slate-400 text-lg">µÑ¿¨¶û×ø±ê (x, y, z) ? Çò×ø±ê (r, ¦È, ¦Õ)</p>
+            <p class="text-slate-400 text-lg">ç¬›å¡å°”åæ ‡ (x, y, z) â†” çƒåæ ‡ (r, Î¸, Ï†)</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -109,10 +109,10 @@
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-blue-400 flex items-center gap-2">
                             <span class="w-2 h-8 bg-blue-500 rounded-full"></span>
-                            µÑ¿¨¶û×ø±ê (Cartesian)
+                            ç¬›å¡å°”åæ ‡ (Cartesian)
                         </h2>
                         <button onclick="randomizeCartesian()" class="text-xs bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full transition">
-                            ?? Ëæ»ú
+                            ðŸŽ² éšæœº
                         </button>
                     </div>
                     
@@ -132,7 +132,7 @@
                     </div>
                     
                     <button onclick="convertToSpherical()" class="btn-convert w-full mt-6 py-3 rounded-xl font-semibold text-white shadow-lg">
-                        ×ª»»ÎªÇò×ø±ê ¡ý
+                        è½¬æ¢ä¸ºçƒåæ ‡ â†“
                     </button>
                 </div>
 
@@ -141,58 +141,58 @@
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-semibold text-purple-400 flex items-center gap-2">
                             <span class="w-2 h-8 bg-purple-500 rounded-full"></span>
-                            Çò×ø±ê (Spherical)
+                            çƒåæ ‡ (Spherical)
                         </h2>
                         <button onclick="randomizeSpherical()" class="text-xs bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full transition">
-                            ?? Ëæ»ú
+                            ðŸŽ² éšæœº
                         </button>
                     </div>
                     
                     <div class="space-y-4">
                         <div class="input-group flex items-center gap-4 p-2 rounded-lg">
-                            <label class="w-24 text-yellow-400 font-bold">r (°ë¾¶)</label>
+                            <label class="w-24 text-yellow-400 font-bold">r (åŠå¾„)</label>
                             <input type="number" id="sphR" value="7.07" step="0.1" class="flex-1 px-4 py-2 rounded-lg text-white" oninput="convertToCartesian()">
                         </div>
                         <div class="input-group flex items-center gap-4 p-2 rounded-lg">
-                            <label class="w-24 text-cyan-400 font-bold">¦È (¼«½Ç)</label>
+                            <label class="w-24 text-cyan-400 font-bold">Î¸ (æžè§’)</label>
                             <input type="number" id="sphTheta" value="0.927" step="0.01" class="flex-1 px-4 py-2 rounded-lg text-white" oninput="convertToCartesian()">
                             <span class="text-slate-500 text-sm">rad</span>
                         </div>
                         <div class="input-group flex items-center gap-4 p-2 rounded-lg">
-                            <label class="w-24 text-pink-400 font-bold">¦Õ (·½Î»½Ç)</label>
+                            <label class="w-24 text-pink-400 font-bold">Ï† (æ–¹ä½è§’)</label>
                             <input type="number" id="sphPhi" value="0.785" step="0.01" class="flex-1 px-4 py-2 rounded-lg text-white" oninput="convertToCartesian()">
                             <span class="text-slate-500 text-sm">rad</span>
                         </div>
                     </div>
                     
                     <button onclick="convertToCartesian()" class="w-full mt-6 py-3 rounded-xl font-semibold text-white shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition transform hover:-translate-y-0.5">
-                        ×ª»»ÎªµÑ¿¨¶û×ø±ê ¡ü
+                        è½¬æ¢ä¸ºç¬›å¡å°”åæ ‡ â†‘
                     </button>
                 </div>
 
                 <!-- Formula Reference -->
                 <div class="formula-card rounded-2xl p-6">
-                    <h3 class="text-lg font-semibold mb-4 text-slate-200">×ª»»¹«Ê½</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-slate-200">è½¬æ¢å…¬å¼</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="space-y-2">
-                            <p class="text-slate-400 font-semibold mb-2">µÑ¿¨¶û ¡ú Çò×ø±ê:</p>
+                            <p class="text-slate-400 font-semibold mb-2">ç¬›å¡å°” â†’ çƒåæ ‡:</p>
                             <div class="font-mono text-slate-300 space-y-1">
-                                <p>r = ¡Ì(x2 + y2 + z2)</p>
-                                <p>¦È = arccos(z/r)</p>
-                                <p>¦Õ = arctan(y/x)</p>
+                                <p>r = âˆš(xÂ² + yÂ² + zÂ²)</p>
+                                <p>Î¸ = arccos(z/r)</p>
+                                <p>Ï† = arctan(y/x)</p>
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <p class="text-slate-400 font-semibold mb-2">Çò×ø±ê ¡ú µÑ¿¨¶û:</p>
+                            <p class="text-slate-400 font-semibold mb-2">çƒåæ ‡ â†’ ç¬›å¡å°”:</p>
                             <div class="font-mono text-slate-300 space-y-1">
-                                <p>x = r¡¤sin(¦È)¡¤cos(¦Õ)</p>
-                                <p>y = r¡¤sin(¦È)¡¤sin(¦Õ)</p>
-                                <p>z = r¡¤cos(¦È)</p>
+                                <p>x = rÂ·sin(Î¸)Â·cos(Ï†)</p>
+                                <p>y = rÂ·sin(Î¸)Â·sin(Ï†)</p>
+                                <p>z = rÂ·cos(Î¸)</p>
                             </div>
                         </div>
                     </div>
                     <div class="mt-4 text-xs text-slate-500">
-                        <p>×¢£º¦È (¼«½Ç) ÊÇÓë Z ÖáµÄ¼Ð½Ç£¬¦Õ (·½Î»½Ç) ÊÇÔÚ XY Æ½ÃæÉÏÓë X ÖáµÄ¼Ð½Ç</p>
+                        <p>æ³¨ï¼šÎ¸ (æžè§’) æ˜¯ä¸Ž Z è½´çš„å¤¹è§’ï¼ŒÏ† (æ–¹ä½è§’) æ˜¯åœ¨ XY å¹³é¢ä¸Šä¸Ž X è½´çš„å¤¹è§’</p>
                     </div>
                 </div>
             </div>
@@ -200,13 +200,13 @@
             <!-- Right Panel: 3D Visualization -->
             <div class="glass-panel rounded-2xl p-1 flex flex-col">
                 <div class="flex justify-between items-center p-4 border-b border-slate-700">
-                    <h2 class="text-lg font-semibold text-slate-200">3D ¿ÉÊÓ»¯</h2>
+                    <h2 class="text-lg font-semibold text-slate-200">3D å¯è§†åŒ–</h2>
                     <div class="flex gap-2">
                         <button onclick="resetView()" class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded-lg text-xs transition">
-                            ÖØÖÃÊÓ½Ç
+                            é‡ç½®è§†è§’
                         </button>
                         <button onclick="toggleAutoRotate()" id="rotateBtn" class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded-lg text-xs transition">
-                            ×Ô¶¯Ðý×ª: ¿ª
+                            è‡ªåŠ¨æ—‹è½¬: å¼€
                         </button>
                     </div>
                 </div>
@@ -217,16 +217,16 @@
                 
                 <div class="p-4 grid grid-cols-3 gap-2 text-xs">
                     <div class="bg-slate-800 rounded-lg p-2 text-center">
-                        <span class="text-red-400 block font-bold">X Öá</span>
-                        <span class="text-slate-400">ºìÉ«</span>
+                        <span class="text-red-400 block font-bold">X è½´</span>
+                        <span class="text-slate-400">çº¢è‰²</span>
                     </div>
                     <div class="bg-slate-800 rounded-lg p-2 text-center">
-                        <span class="text-green-400 block font-bold">Y Öá</span>
-                        <span class="text-slate-400">ÂÌÉ«</span>
+                        <span class="text-green-400 block font-bold">Y è½´</span>
+                        <span class="text-slate-400">ç»¿è‰²</span>
                     </div>
                     <div class="bg-slate-800 rounded-lg p-2 text-center">
-                        <span class="text-blue-400 block font-bold">Z Öá</span>
-                        <span class="text-slate-400">À¶É«</span>
+                        <span class="text-blue-400 block font-bold">Z è½´</span>
+                        <span class="text-slate-400">è“è‰²</span>
                     </div>
                 </div>
             </div>
@@ -235,16 +235,16 @@
         <!-- Info Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div class="glass-panel rounded-xl p-4">
-                <h4 class="text-yellow-400 font-semibold mb-2">r (¾¶Ïò¾àÀë)</h4>
-                <p class="text-sm text-slate-400">µãµ½Ô­µãµÄÖ±Ïß¾àÀë£¬·¶Î§ [0, ¡Þ)</p>
+                <h4 class="text-yellow-400 font-semibold mb-2">r (å¾„å‘è·ç¦»)</h4>
+                <p class="text-sm text-slate-400">ç‚¹åˆ°åŽŸç‚¹çš„ç›´çº¿è·ç¦»ï¼ŒèŒƒå›´ [0, âˆž)</p>
             </div>
             <div class="glass-panel rounded-xl p-4">
-                <h4 class="text-cyan-400 font-semibold mb-2">¦È (¼«½Ç/Inclination)</h4>
-                <p class="text-sm text-slate-400">ÓëÕý Z ÖáµÄ¼Ð½Ç£¬·¶Î§ [0, ¦Ð]</p>
+                <h4 class="text-cyan-400 font-semibold mb-2">Î¸ (æžè§’/Inclination)</h4>
+                <p class="text-sm text-slate-400">ä¸Žæ­£ Z è½´çš„å¤¹è§’ï¼ŒèŒƒå›´ [0, Ï€]</p>
             </div>
             <div class="glass-panel rounded-xl p-4">
-                <h4 class="text-pink-400 font-semibold mb-2">¦Õ (·½Î»½Ç/Azimuth)</h4>
-                <p class="text-sm text-slate-400">ÔÚ XY Æ½ÃæÓëÕý X ÖáµÄ¼Ð½Ç£¬·¶Î§ [0, 2¦Ð)</p>
+                <h4 class="text-pink-400 font-semibold mb-2">Ï† (æ–¹ä½è§’/Azimuth)</h4>
+                <p class="text-sm text-slate-400">åœ¨ XY å¹³é¢ä¸Žæ­£ X è½´çš„å¤¹è§’ï¼ŒèŒƒå›´ [0, 2Ï€)</p>
             </div>
         </div>
     </div>
@@ -442,7 +442,7 @@
         
         function toggleAutoRotate() {
             autoRotate = !autoRotate;
-            document.getElementById('rotateBtn').textContent = `×Ô¶¯Ðý×ª: ${autoRotate ? '¿ª' : '¹Ø'}`;
+            document.getElementById('rotateBtn').textContent = `è‡ªåŠ¨æ—‹è½¬: ${autoRotate ? 'å¼€' : 'å…³'}`;
         }
         
         // Conversion Functions
